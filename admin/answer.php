@@ -17,14 +17,19 @@ if($is_admin)
 		$rows->bindParam(':answer',$answer);
 		$rows->execute();
 		$is_answered = true;
-		$redirect = $_SERVER['SERVER_NAME'];
+		//$redirect = $_SERVER['SERVER_NAME'];
+		$redirect = '..';
 	}
 	else
 	{
-		$rows = $pdo->prepare('SELECT answer,msg FROM book WHERE id=:id');
+		$rows = $pdo->prepare('SELECT * FROM book WHERE id=:id');
 		$rows->bindParam(':id',$id_to_answer);
 		$rows->execute();
 		$row = $rows->fetch();
+		$location = $row['location'];
+		$name = $row['name'];
+		$phone = $row['phone'];
+		$email = $row['email'];
 		$message = $row['msg'];
 		$answer = $row['answer'];
 		$is_answered = false;

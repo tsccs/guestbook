@@ -15,15 +15,22 @@ if($is_admin)
 		$STH->bindParam(':id',$id_to_delete);
 		$STH->execute();
 		$is_delete = true;
-		$redirect = $_SERVER['SERVER_NAME']; 
+		//$redirect = $_SERVER['SERVER_NAME'];
+		$redirect = '..';
 	}
 	else
 	{
-		$rows = $pdo->prepare('SELECT msg FROM book WHERE id=:id');
+		$rows = $pdo->prepare('SELECT * FROM book WHERE id=:id');
 		$rows->bindParam(':id',$id_to_delete);
 		$rows->execute();
 		$row = $rows->fetch();
+		$datetime = $row['date'];
+		$location = $row['location'];
+		$name = $row['name'];
+		$phone = $row['phone'];
+		$email = $row['email'];
 		$message = $row['msg'];
+		$answer = $row['answer'];
 		$is_delete = false;
 	}
 }

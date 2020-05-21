@@ -11,20 +11,33 @@ if($is_admin)
 	$id_to_edit = trim($_GET['id']);
 	if(isset($_POST['ok']))
 	{			
+		$loc_to_save = trim(htmlspecialchars($_POST['location']));
+		$name_to_save = trim(htmlspecialchars($_POST['name']));
+		$phone_to_save = trim(htmlspecialchars($_POST['phone']));
+		$email_to_save = trim(htmlspecialchars($_POST['email']));
 		$message_to_save = trim(htmlspecialchars($_POST['message']));
-		$rows = $pdo->prepare('UPDATE book SET msg=:message WHERE id=:id;');
+		$rows = $pdo->prepare('UPDATE book SET location=:location, name=:name, phone=:phone, email=:email, msg=:message WHERE id=:id;');
 		$rows->bindParam(':id',$id_to_edit);
+		$rows->bindParam(':location',$loc_to_save);
+		$rows->bindParam(':name',$name_to_save);
+		$rows->bindParam(':phone',$phone_to_save);
+		$rows->bindParam(':email',$email_to_save);
 		$rows->bindParam(':message',$message_to_save);
 		$rows->execute();
 		$is_edit = true;
-		$redirect = $_SERVER['SERVER_NAME'];
+		//$redirect = $_SERVER['SERVER_NAME'];
+		$redirect = '..';
 	}
 	else
 	{
-		$rows = $pdo->prepare('SELECT msg FROM book WHERE id=:id');
+		$rows = $pdo->prepare('SELECT * FROM book WHERE id=:id');
 		$rows->bindParam(':id',$id_to_edit);
 		$rows->execute();
 		$row = $rows->fetch();
+		$location = $row['location'];
+		$name = $row['name'];
+		$phone = $row['phone'];
+		$email = $row['email'];
 		$message = $row['msg'];
 		$is_edit = false;
 	}
