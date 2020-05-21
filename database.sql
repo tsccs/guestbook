@@ -2,10 +2,10 @@
 -- version 4.5.5.1
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1
--- Время создания: Сен 09 2016 г., 21:08
--- Версия сервера: 5.7.11
--- Версия PHP: 5.6.19
+-- Host: 127.0.0.1
+-- Date Created: Sep 09, 2016 9:08 p.m. Host
+-- Server Version: 5.7.11
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,39 +17,43 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `guestbook`
+-- Database: `guestbook`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `book`
+-- Table structure `book`
 --
 
 CREATE TABLE `book` (
   `id` int(11) NOT NULL,
-  `msg` text COLLATE utf8_unicode_ci NOT NULL,
+  `location` text COLLATE utf8_unicode_ci NOT NULL,
+  `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `phone` text COLLATE utf8_unicode_ci,
+  `email` text COLLATE utf8_unicode_ci,
+  `msg` text COLLATE utf8_unicode_ci,
   `date` timestamp NULL DEFAULT NULL,
   `answer` text COLLATE utf8_unicode_ci,
-  `name` text COLLATE utf8_unicode_ci
+  `user` text COLLATE utf8_unicode_ci
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Индексы сохранённых таблиц
+-- Indexes of Saved Tables
 --
 
 --
--- Индексы таблицы `book`
+-- Table Indexes `book`
 --
 ALTER TABLE `book`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for saved tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `book`
+-- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
