@@ -4,7 +4,7 @@ $title = "Admin access";
 $errors = '';
 $is_success = false;
 
-include '/config.php';
+include 'config.php';
 
 if(!empty($_POST['ok']))
 {
@@ -13,7 +13,8 @@ if(!empty($_POST['ok']))
 		if($hash_pass == hash("sha256",$_POST['password'],false))
 		{
 			setcookie("pass",$hash_pass);
-			$redirect = $_SERVER['SERVER_NAME'];
+			//$redirect = $_SERVER['SERVER_NAME'];
+			$redirect = '.';
 			$is_success = true;
 		}
 		else
@@ -27,8 +28,8 @@ if(!empty($_POST['ok']))
 	}
 }
 
-include '/tpl/header.tpl';
-include '/tpl/login.tpl';
-include '/tpl/footer.tpl';
+include 'tpl/header.tpl';
+include 'tpl/login.tpl';
+include 'tpl/footer.tpl';
 
 ?>
