@@ -6,7 +6,7 @@ if($is_admin)
 	if($is_answered)
 	{
 	
-		echo '<div class="msg">Answer is added.</div>';
+		echo '<div class="msg">Answer is added.<br/>You will redirect to the main page after 2 seconds.</div>';
 	
 	}
 	else
@@ -15,9 +15,13 @@ if($is_admin)
 	?>
 
 		<div class="msg">Message id: <?php echo $id_to_answer; ?></div>
-		<div class="msg">Message text: <?php echo $message; ?></div>
+		<div class="msg">Location: <?php echo $location; ?>
+		<br/>Name: <?php echo $name; ?>
+		<br/>Phone: <?php echo $phone; ?>
+		<br/>Email: <?php echo $email; ?>
+		<br/>Message text: <?php echo $message; ?></div>
 		<form action="?id=<?php echo $id_to_answer; ?>" method="POST">
-		<textarea name="answer" cols="50" rows="4" maxlength="450" placeholder="Type your answer here"><?php echo $answer; ?></textarea>
+		<textarea name="answer" cols="61" rows="4" maxlength="450" placeholder="Type your answer here"><?php echo $answer; ?></textarea>
 		<input type = "submit" name = "ok" value = "Answer"/>
 		</form>
 		
@@ -31,4 +35,4 @@ else
 <?php
 }
 ?>
-<div class = "msg"><a href = "/">Home</div>
+<div class = "msg"><a href = "../">Home</div>
