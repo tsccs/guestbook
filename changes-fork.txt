@@ -1,0 +1,18 @@
+Redesigned for multi-office guestbook capability.
+Redesigned the interface a bit.
+Added additional entry fields.
+Some fields can be required.
+Some fields can be filled by by URL. ?location=Atlanta or Store123
+  This would allow office specific QRCode scanning to auto-fill the location.
+
+config.php Changes:
+$companyname - Set your company name for title use.
+$guestbooksubfolder - code in the URL subfolder, and stay in the folder when changing pages.
+$perpagemax - How many guests are shown on each page.
+$adminrequired - Is admin login required to view guest list.
+$guestnonadminmax - Show this many recent guests, only if admin is required (above).
+$keeplocation - Keep location filled after guestbook add.
+
+
+TO-DO: Add variable for each field for required?
+TO-DO: Add Admin option to export results. Maybe even filter export.
