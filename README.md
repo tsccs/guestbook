@@ -10,7 +10,7 @@ Some fields can be required.
 Some fields can be filled by by URL. ?location=Atlanta or Store123
   This would allow office specific QRCode scanning to auto-fill the location.
 Guestbook entries can be hidden unless admin is logged in.
-
+ 
 ### Requirements
 
 * PHP 5.6
