@@ -1,5 +1,5 @@
 # GuestBook
-This is a Simple Guest book with smiles and admin panel.
+This is a Simple Guest book or Visitor log with smiles and admin panel.
 
 # Fork Changes:
 * Redesigned for multi-office guestbook capability.
