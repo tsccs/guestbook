@@ -6,7 +6,19 @@ if($location != '') $loc_after_refresh = $location
 ?>
 
 <form action="?p=<?php echo $page;?>" method="POST">
-	<textarea name="location" cols="61" rows="1" maxlength="64" placeholder="Location of Visit (required)" <?php if($loc_after_refresh == '') echo 'autofocus'; ?> required><?php echo $loc_after_refresh; ?></textarea>
+	<?php
+	if (empty($locationlist)) {
+		echo '<textarea name="location" cols="61" rows="1" maxlength="64" placeholder="Location of Visit (required)" ' . ($loc_after_refresh == '' ? 'autofocus' : '') . ' required>' . htmlspecialchars($loc_after_refresh) . '</textarea>';
+	} else {
+		$locations = preg_split("/[;,]/", $locationlist); // Split by comma or semicolon
+		echo 'Select Location: <select name="location" required>';
+		foreach ($locations as $location) {
+			$selected = ($location == $loc_after_refresh) ? 'selected' : '';
+			echo '<option value="' . htmlspecialchars($location) . '" ' . $selected . '>' . htmlspecialchars($location) . '</option>';
+		}
+		echo '</select> (required)';
+	}
+	?>
 	<br/>
 	<textarea name="name" cols="61" rows="1" maxlength="64" placeholder="Your Name (required)" <?php if($name_after_refresh == '') echo 'autofocus'; ?> required><?php echo $name_after_refresh; ?></textarea>
 	<br/>
