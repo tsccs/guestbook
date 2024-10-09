@@ -5,7 +5,7 @@ This is a Simple Guest book or Visitor log with smiles and admin panel.
 * Redesigned for multi-office guestbook capability.
 * Redesigned the interface a bit.
 * Added additional entry fields.
-  * Location, Name, Phone Number, Email Address, Additional Info
+  * Location, Name, Company, Phone Number, Email Address, Additional Info
 * Some fields can be required.
 * Some fields can be filled by by URL. ?location=Atlanta or Store123
   * This would allow office specific QRCode scanning to auto-fill the location.
