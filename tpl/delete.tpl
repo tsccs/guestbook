@@ -18,6 +18,7 @@ if($is_admin)
 		<br/>Date-Time: <?php echo $datetime; ?>
 		<br/>Location: <?php echo $location; ?>
 		<br/>Name: <?php echo $name; ?>
+		<br/>Company: <?php echo $company; ?>
 		<br/>Phone: <?php echo $phone; ?>
 		<br/>Email: <?php echo $email; ?>
 		<br/>Message text: <?php echo $message; ?>

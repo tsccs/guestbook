@@ -10,6 +10,7 @@ include 'admin/auth.php';
 $errors = '';
 $loc_after_refresh = isset($_POST['location']) ? $_POST['location'] : '';
 $name_after_refresh = isset($_POST['name']) ? $_POST['name'] : '';
+$company_after_refresh = isset($_POST['company']) ? $_POST['company'] : '';
 $phone_after_refresh = isset($_POST['phone']) ? $_POST['phone'] : '';
 $email_after_refresh = isset($_POST['email']) ? $_POST['email'] : '';
 $msg_after_refresh = isset($_POST['message']) ? $_POST['message'] : '';
@@ -36,6 +37,7 @@ if($isadd)
 			//Prepare input data
 			$loc_to_save = trim(htmlspecialchars($_POST['location']));
 			$name_to_save = trim(htmlspecialchars($_POST['name']));
+			$company_to_save = trim(htmlspecialchars($_POST['company']));
 			$phone_to_save = trim(htmlspecialchars($_POST['phone']));
 			$email_to_save = trim(htmlspecialchars($_POST['email']));
 			$msg_to_save = trim(htmlspecialchars($_POST['message']));
@@ -56,9 +58,10 @@ if($isadd)
 			////
 			
 			//Save message
-			$STH = $pdo->prepare("INSERT INTO book (location,name,phone,email,msg,date,user) VALUES (:location,:name,:phone,:email,:msg,now(),:user);");
+			$STH = $pdo->prepare("INSERT INTO book (location,name,company,phone,email,msg,date,user) VALUES (:location,:name,:company,:phone,:email,:msg,now(),:user);");
 			$STH->bindParam(':location',$loc_to_save);
 			$STH->bindParam(':name',$name_to_save);
+			$STH->bindParam(':company',$company_to_save);
 			$STH->bindParam(':phone',$phone_to_save);
 			$STH->bindParam(':email',$email_to_save);
 			$STH->bindParam(':msg',$msg_to_save);
@@ -67,6 +70,7 @@ if($isadd)
 			//////////
 			if(!$keeplocation) $loc_after_refresh = '';
 			$name_after_refresh = '';
+			$company_after_refresh = '';
 			$phone_after_refresh = '';
 			$email_after_refresh = '';
 			$msg_after_refresh = '';
@@ -86,6 +90,7 @@ if(isset($_POST['refresh']))
 {
     $loc_after_refresh = $_POST['location'];
     $name_after_refresh = $_POST['name'];
+    $company_after_refresh = $_POST['company'];
     $phone_after_refresh = $_POST['phone'];
     $email_after_refresh = $_POST['email'];
     $msg_after_refresh = $_POST['message'];

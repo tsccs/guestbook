@@ -17,6 +17,7 @@ if($is_admin)
 		<div class="msg">Message id: <?php echo $id_to_answer; ?></div>
 		<div class="msg">Location: <?php echo $location; ?>
 		<br/>Name: <?php echo $name; ?>
+		<br/>Company: <?php echo $company; ?>
 		<br/>Phone: <?php echo $phone; ?>
 		<br/>Email: <?php echo $email; ?>
 		<br/>Message text: <?php echo $message; ?></div>

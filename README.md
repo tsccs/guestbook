@@ -5,7 +5,7 @@ This is a Simple Guest book or Visitor log with smiles and admin panel.
 * Redesigned for multi-office guestbook capability.
 * Redesigned the interface a bit.
 * Added additional entry fields.
-  * Location, Name, Phone Number, Email Address, Additional Info
+  * Location, Name, Company, Phone Number, Email Address, Additional Info
 * Some fields can be required.
 * Some fields can be filled by by URL. ?location=Atlanta or Store123
   * This would allow office specific QRCode scanning to auto-fill the location.
@@ -20,6 +20,12 @@ This is a Simple Guest book or Visitor log with smiles and admin panel.
 ### Install & Run
 
 * Import database.sql.txt
-* Configure database connection in db_config.php
+* Configure database connection in db_config.php.new, then remove ".new" from then end of the file.
+* Configure options in config.php.new, then remove ".new" from then end of the file.
 * Save your password hash in config.php (alg. SHA-256)
+
+### Upgrade
+ * Import database.sql.company.txt
+ * Upload all files over the originals.
+ * You may want to copy your config.php settings into the config.php.new file, and then replace your config.php.
 
