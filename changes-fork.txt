@@ -18,3 +18,7 @@ $keeplocation - Keep location filled after guestbook add.
 
 TO-DO: Add variable for each field for required?
 TO-DO: Add Admin option to export results. Maybe even filter export.
+
+2024-10-09
+Added option for Locations list to be provided in the config.php
+Added Company input after the name.
