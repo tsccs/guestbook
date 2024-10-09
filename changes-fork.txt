@@ -21,4 +21,9 @@ TO-DO: Add Admin option to export results. Maybe even filter export.
 
 2024-10-09
 Added option for Locations list to be provided in the config.php
-Added Company input after the name.
+Added Company input box after the name, and added the database entry for it.
+Added ability for [Refresh] button to work without entering data.
+Changed main screen textarea to input boxes to support better mobile browser interaction.
+Added styles for better spacing for forms>select/input/textarea.
+Formatting tweaks and a couple small bug fixes.
+
