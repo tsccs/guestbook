@@ -6,7 +6,7 @@
 		<?php echo '<link rel="stylesheet" href="';
 			if(isset($guestbooksubfolder)) echo '/'.$guestbooksubfolder.'/';
 			echo 'tpl/style.css" type="text/css" />'.PHP_EOL; ?>
-		<?php if(isset($redirect)) echo '<meta http-equiv="refresh" content="2; URL=\''.$redirect.'\'" />'.PHP_EOL; ?>
+		<?php if($redirect != '') echo '<meta http-equiv="refresh" content="2; URL=\''.$redirect.'\'" />'.PHP_EOL; ?>
 	</head>
 	<body>
         <div class="all">
