@@ -13,8 +13,8 @@ if(isset($location)) $loc_after_refresh = $location
         $locations = preg_split("/[;,]/", $locationlist); // Split by comma or semicolon
         echo 'Select Location: <select name="location" required>';
         foreach ($locations as $location) {
-            $selected = ($location == $loc_after_refresh) ? 'selected' : '';
-            echo '<option value="' . htmlspecialchars($location) . '" ' . $selected . '>' . htmlspecialchars($location) . '</option>';
+            $selected = (trim($location) == $loc_after_refresh) ? 'selected' : '';
+            echo '<option value="' . htmlspecialchars(trim($location)) . '" ' . $selected . '>' . htmlspecialchars(trim($location)) . '</option>';
         }
         echo '</select> (required)';
     }
@@ -56,7 +56,7 @@ foreach ($messages as $row)
 	}
 	if($row['phone'] != '' || $row['email'] != '')
 	{	
-		echo '<br/><span class="alignleft"><b>Email</b>: '.$row['email'].'</span><span class="alignright">>&nbsp;<b>Phone</b>: '.$row['phone'].'&nbsp;</span>';
+		echo '<br/><span class="alignleft"><b>Email</b>: '.$row['email'].'</span>&nbsp;<span class="alignright"><b>Phone</b>: '.$row['phone'].'&nbsp;</span>';
 	}
 	if($row['msg'] != '') echo '<br/><b>Message</b>: '.$row['msg'];
 	if($row['answer'] != '') echo '<br/><b>Answer</b>: '.$row['answer'];
