@@ -30,6 +30,7 @@ CREATE TABLE `book` (
   `id` int(11) NOT NULL,
   `location` text COLLATE utf8_unicode_ci NOT NULL,
   `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `company` text COLLATE utf8_unicode_ci,
   `phone` text COLLATE utf8_unicode_ci,
   `email` text COLLATE utf8_unicode_ci,
   `msg` text COLLATE utf8_unicode_ci,
