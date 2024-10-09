@@ -9,5 +9,7 @@ $keeplocation = true; //Keep location filled after guestbook add.
 $locationlist = ''; //Location List, separated by comma or semicolon. (Optional)
 $hash_pass = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"; // sha256 Hash of password 1234
 $redirect = '';
+putenv("TZ=US/Eastern");
+date_default_timezone_set("US/Eastern");
 
 ?>
