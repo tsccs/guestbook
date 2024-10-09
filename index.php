@@ -1,6 +1,6 @@
 <?php
 
-$title = "Visitor Log & Guest Book";
+$title = "Guest Book";
 
 include 'config.php';
 include 'db_config.php';
