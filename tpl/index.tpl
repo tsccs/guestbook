@@ -32,7 +32,7 @@ if(isset($location)) $loc_after_refresh = $location
 	<br/>
 	Code: <?php echo $captcha; ?> <input type="number" name="captcha" placeholder="Enter digits (required)" autofocus required />
 	<button name="add">Add</button>
-	<button name="refresh">Refresh</button>
+	<button name="refresh" formnovalidate>Refresh</button>
 	
 </form>
 
