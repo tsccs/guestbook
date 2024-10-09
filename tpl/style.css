@@ -56,6 +56,9 @@ margin: 0px;
 font-size: 16px;
 border: #000000 double 4px;
 }
+select, input, textarea {
+margin-bottom: 3px;
+}
 .all {
 border-left: 6px double #000000;
 margin: 0 auto;

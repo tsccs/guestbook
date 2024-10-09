@@ -20,13 +20,13 @@ if(isset($location)) $loc_after_refresh = $location
     }
     ?>
 	<br/>
-	<textarea name="name" cols="61" rows="1" maxlength="64" placeholder="Your Name (required)" <?php if($name_after_refresh == '') echo 'autofocus'; ?> required><?php echo $name_after_refresh; ?></textarea>
+	<input name="name" size="60" maxlength="64" placeholder="Your Name (required)" <?php if($name_after_refresh == '') { echo 'autofocus'; } else { echo "Value='{$name_after_refresh}'"; } ?> required />
 	<br/>
-	<textarea name="company" cols="61" rows="1" maxlength="64" placeholder="Your Company" <?php if($company_after_refresh == '') echo 'autofocus'; ?>><?php echo $company_after_refresh; ?></textarea>
+	<input name="company" size="60" maxlength="64" placeholder="Your Company" <?php if($company_after_refresh == '') { echo 'autofocus'; } else { echo "Value='{$company_after_refresh}'"; } ?> />
 	<br/>
-	<textarea name="phone" cols="61" rows="1" maxlength="20" placeholder="Your Phone Number" <?php if($phone_after_refresh == '') echo 'autofocus'; ?>><?php echo $phone_after_refresh; ?></textarea>
+	<input name="phone" size="60" maxlength="20" placeholder="Your Phone Number" <?php if($phone_after_refresh == '') { echo 'autofocus'; } else { echo "Value='{$phone_after_refresh}'"; } ?> type="tel" />
 	<br/>
-	<textarea name="email" cols="61" rows="1" maxlength="80" placeholder="Your Email Address" <?php if($email_after_refresh == '') echo 'autofocus'; ?>><?php echo $email_after_refresh; ?></textarea>
+	<input name="email" size="60" maxlength="80" placeholder="Your Email Address" <?php if($email_after_refresh == '') { echo 'autofocus'; } else { echo "Value='{$email_after_refresh}'"; } ?> type="email" />
 	<br/>
 	<textarea name="message" cols="61" rows="4" maxlength="450" placeholder="Additional info or accompanying guests" <?php if($msg_after_refresh == '') echo 'autofocus'; ?>><?php echo $msg_after_refresh; ?></textarea>
 	<br/>
