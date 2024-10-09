@@ -10,7 +10,7 @@ include 'admin/auth.php';
 $errors = '';
 $loc_after_refresh = isset($_POST['location']) ? $_POST['location'] : '';
 $name_after_refresh = isset($_POST['name']) ? $_POST['name'] : '';
-$comapny_after_refresh = isset($_POST['company']) ? $_POST['company'] : '';
+$company_after_refresh = isset($_POST['company']) ? $_POST['company'] : '';
 $phone_after_refresh = isset($_POST['phone']) ? $_POST['phone'] : '';
 $email_after_refresh = isset($_POST['email']) ? $_POST['email'] : '';
 $msg_after_refresh = isset($_POST['message']) ? $_POST['message'] : '';
