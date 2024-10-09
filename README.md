@@ -20,9 +20,9 @@ This is a Simple Guest book or Visitor log with smiles and admin panel.
 ### Install & Run
 
 * Import database.sql.txt
-* Configure database connection in db_config.php.new, then remove ".new" from then end of the file.
-* Configure options in config.php.new, then remove ".new" from then end of the file.
-* Save your password hash in config.php (alg. SHA-256)
+* Configure database connection in db_config.php.new, then remove ".new" from the end of the file.
+* Configure options in config.php.new, then remove ".new" from the end of the file.
+* Update your admin password hash in config.php (alg. SHA-256)
 
 ### Upgrade
  * Import database.sql.company.txt
