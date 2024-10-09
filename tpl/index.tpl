@@ -56,8 +56,7 @@ foreach ($messages as $row)
 	}
 	if($row['phone'] != '' || $row['email'] != '')
 	{	
-		//echo '<br/><span class="alignleft"><b>Phone</b>: '.$row['phone'].'</span><span class="alignright">&nbsp;<b>Email</b>: '.$row['email'].'&nbsp;</span>';
-		echo '<br/><span class="alignleft"><b>Email</b>: '.$row['email'].'</span><span class="alignright"><b>Phone</b>: '.$row['phone'].'&nbsp;</span>';
+		echo '<br/><span class="alignleft"><b>Email</b>: '.$row['email'].'</span><span class="alignright">>&nbsp;<b>Phone</b>: '.$row['phone'].'&nbsp;</span>';
 	}
 	if($row['msg'] != '') echo '<br/><b>Message</b>: '.$row['msg'];
 	if($row['answer'] != '') echo '<br/><b>Answer</b>: '.$row['answer'];
