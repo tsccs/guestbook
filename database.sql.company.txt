@@ -1,0 +1,14 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Date Created: Oct 09, 2024
+-- Server Version: 5.7.11
+-- PHP Version: 5.6.19
+--
+-- Upgrade Note:
+-- Import this into the "guestbook" database to add the `company` column.
+
+ALTER TABLE `book`
+ADD COLUMN `company` TEXT COLLATE utf8_unicode_ci AFTER `name`;
