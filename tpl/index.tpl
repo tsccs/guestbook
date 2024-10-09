@@ -1,8 +1,8 @@
 <?php
 if($errors != '') echo '<div class="error">'.$errors.'</div>';
-$location = $_GET['loc'];
-if($location == '') $location = $_GET['location'];
-if($location != '') $loc_after_refresh = $location
+if(isset($_GET['loc'])) $location = $_GET['loc'];
+if(!isset($location)) {if(isset($_GET['location'])) {$location = $_GET['location'];}}
+if(isset($location)) $loc_after_refresh = $location
 ?>
 
 <form action="?p=<?php echo $page;?>" method="POST">
