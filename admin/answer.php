@@ -28,6 +28,7 @@ if($is_admin)
 		$row = $rows->fetch();
 		$location = $row['location'];
 		$name = $row['name'];
+		$company = $row['company'];
 		$phone = $row['phone'];
 		$email = $row['email'];
 		$message = $row['msg'];

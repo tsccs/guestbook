@@ -27,6 +27,7 @@ if($is_admin)
 		$datetime = $row['date'];
 		$location = $row['location'];
 		$name = $row['name'];
+		$company = $row['company'];
 		$phone = $row['phone'];
 		$email = $row['email'];
 		$message = $row['msg'];

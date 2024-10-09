@@ -13,13 +13,15 @@ if($is_admin)
 	{			
 		$loc_to_save = trim(htmlspecialchars($_POST['location']));
 		$name_to_save = trim(htmlspecialchars($_POST['name']));
+		$company_to_save = trim(htmlspecialchars($_POST['company']));
 		$phone_to_save = trim(htmlspecialchars($_POST['phone']));
 		$email_to_save = trim(htmlspecialchars($_POST['email']));
 		$message_to_save = trim(htmlspecialchars($_POST['message']));
-		$rows = $pdo->prepare('UPDATE book SET location=:location, name=:name, phone=:phone, email=:email, msg=:message WHERE id=:id;');
+		$rows = $pdo->prepare('UPDATE book SET location=:location, name=:name, company=:company, phone=:phone, email=:email, msg=:message WHERE id=:id;');
 		$rows->bindParam(':id',$id_to_edit);
 		$rows->bindParam(':location',$loc_to_save);
 		$rows->bindParam(':name',$name_to_save);
+		$rows->bindParam(':company',$company_to_save);
 		$rows->bindParam(':phone',$phone_to_save);
 		$rows->bindParam(':email',$email_to_save);
 		$rows->bindParam(':message',$message_to_save);
@@ -36,6 +38,7 @@ if($is_admin)
 		$row = $rows->fetch();
 		$location = $row['location'];
 		$name = $row['name'];
+		$company = $row['company'];
 		$phone = $row['phone'];
 		$email = $row['email'];
 		$message = $row['msg'];
